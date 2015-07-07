@@ -6,6 +6,7 @@ public class Elevator {
 Door door =new Door();
 int current_floor;
 boolean elevatorState;
+Floor floor;
 ArrayList <Button> floorPanel=new ArrayList<>();
 
 
@@ -15,12 +16,7 @@ public Door OpenDoor() {
 }
 
 
-public void setDoor(Door door) {
-	this.door = door;
-}
-
-
-public boolean isElevatorState() {
+public boolean getElevatorState() {
 	return elevatorState;
 }
 
@@ -30,15 +26,21 @@ public void setElevatorState(boolean elevatorState) {
 }
 
 
-	public int getCurrent_pos() {
-		return current_floor;
+		public String  move(Integer input){
+		
+		if(!elevatorState)	{	
+		
+		if(floor.getCurrentFloorNumber()< input)
+			return "up";
+		else
+			if(floor.getCurrentFloorNumber()>input)
+				return "down";
+			
+		floor.setCurrentFloorNumber(input);
+        return door.opendoor();
+		}
+		return null;
 	}
-	
-
-	public void setCurrent_pos(int current_pos) {
-		this.current_floor = current_pos;
-	} 
-     
 	
 	
 }

@@ -2,22 +2,22 @@ package elevatorWorking;
 
 public class Door {
   // E;evator attributes
-	Boolean doorStatus;
+	String doorStatus;
 	
 	public Door() {
-		this.doorStatus=false;
+		this.doorStatus="closed";
 		// TODO Auto-generated constructor stub
 	}
 	
 	
-	public boolean opendoor(){
+	public String opendoor(){
 		
- return this.doorStatus=true;
+     return this.doorStatus="open";
 	}
 	
-public boolean closedoor(){
+public String closedoor(){
 		
-		return this.doorStatus=false;
+		return this.doorStatus="close";
 	}
 
 }

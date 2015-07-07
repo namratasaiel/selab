@@ -5,6 +5,9 @@ public class FloorButton implements Button {
 	@Override
 	public Integer setValue(Integer command) {
 input=command;
+
 return input;
 	}
+	
+	
 }
