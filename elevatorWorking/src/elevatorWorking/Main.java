@@ -4,7 +4,8 @@ public class Main {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		String status;
+		//version 3
+	String status;
 		
     Elevator elevatorcontrol=new Elevator();
     FloorButton floorbutton=new FloorButton();
