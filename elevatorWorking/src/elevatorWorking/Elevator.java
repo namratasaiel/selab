@@ -7,6 +7,7 @@ Door door =new Door();
 int current_floor;
 boolean elevatorState;
 Floor floor;
+String output="true";
 ArrayList <Button> floorPanel=new ArrayList<>();
 
 
@@ -27,19 +28,19 @@ public void setElevatorState(boolean elevatorState) {
 
 
 		public String  move(Integer input){
-		
 		if(!elevatorState)	{	
-		
+
 		if(floor.getCurrentFloorNumber()< input)
-			return "up";
+			output="up";
 		else
 			if(floor.getCurrentFloorNumber()>input)
-				return "down";
+				output="down";
 			
 		floor.setCurrentFloorNumber(input);
-        return door.opendoor();
+		
+        output=door.opendoor();
 		}
-		return null;
+		return output;
 	}
 	
 	
